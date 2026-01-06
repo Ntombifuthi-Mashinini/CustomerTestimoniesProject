@@ -30,3 +30,45 @@ const reviews = [
 ];
 
 //Selecting Items
+const img = document.getElementById('person-img');
+const author = document.getElementById('author');
+const job = document.getElementById('job');
+const info = document.getElementById('info');
+
+const prevBtn = document.querySelector('.prevBtn');
+const nextBtn = document.querySelector('.nextBtn');
+const randomBtn = document.querySelector('.randomBtn');
+
+//Selecting items
+let currentItem = 0;
+
+//Setting up the page load
+window.addEventListener('clicks', function(){
+  getPerson(currentItem);
+});
+
+function getPerson(person){
+  const item = reviews[person];
+  img.src = item.img;
+  author.textContent = item.name;
+  job.textContent = item.job;
+  info.textContent = item.text;
+};
+
+nextBtn.addEventListener('click', function(){
+currentItem ++;
+currentItem = currentItem > reviews.length-1 ? 0: currentItem;
+getPerson(currentItem);
+});
+
+prevBtn.addEventListener('click', function(){
+currentItem --;
+currentItem = currentItem < reviews.length ? 0: currentItem;
+getPerson(currentItem);
+});
+
+randomBtn.addEventListener('click', function(){
+  currentItem = Math.floor(Math.random()* reviews.length);
+  getPerson(currentItem);
+});
+
