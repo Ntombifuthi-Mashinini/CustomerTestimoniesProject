@@ -27,6 +27,13 @@ const reviews = [
     img: 'https://www.course-api.com/images/people/person-3.jpeg',
     text: 'Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ',
   },
+   {
+    id: 5,
+    name: 'Ntombi Mashinini',
+    job: 'software developer',
+    img: 'https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/198/original/WhatsApp_Image_2025-12-16_at_14.13.12_%281%29.jpeg?1767705293',
+    text: 'Ntombi Mashinini is an emerging Software Developer who thrives on turning ideas into practical, well‑built applications. With a sharp eye for detail and a drive for continuous growth, she brings both technical skill and creative problem‑solving to every project she tackles.',
+  },
 ];
 
 //Selecting Items
@@ -43,8 +50,8 @@ const randomBtn = document.querySelector('.randomBtn');
 let currentItem = 0;
 
 //Setting up the page load
-window.addEventListener('clicks', function(){
-  getPerson(currentItem);
+window.addEventListener('DOMContentLoaded', function () { 
+  getPerson(currentItem); 
 });
 
 function getPerson(person){
@@ -63,7 +70,7 @@ getPerson(currentItem);
 
 prevBtn.addEventListener('click', function(){
 currentItem --;
-currentItem = currentItem < reviews.length ? 0: currentItem;
+currentItem = currentItem < 0 ? reviews.length - 1 : currentItem;
 getPerson(currentItem);
 });
 
