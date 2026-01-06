@@ -32,7 +32,7 @@ const reviews = [
     name: 'Ntombi Mashinini',
     job: 'software developer',
     img: 'https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/198/original/WhatsApp_Image_2025-12-16_at_14.13.12_%281%29.jpeg?1767705293',
-    text: 'Ntombi Mashinini is an emerging Software Developer who thrives on turning ideas into practical, well‑built applications. With a sharp eye for detail and a drive for continuous growth, she brings both technical skill and creative problem‑solving to every project she tackles.',
+    text: 'Ntombi Mashinini is a Software Developer who thrives on turning ideas into practical, well‑built applications. With a sharp eye for detail and a drive for continuous growth, she brings both technical skill and creative problem‑solving to every project she tackles.',
   },
 ];
 
